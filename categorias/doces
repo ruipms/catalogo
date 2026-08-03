@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces - Stardiver</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Doces</h1>
+</header>
+
+<main class="menu">
+    <a href="../subcategorias/doces/gomas.html" class="btn">Gomas</a>
+    <a href="../subcategorias/doces/chocolates.html" class="btn">Chocolates</a>
+    <a href="../subcategorias/doces/pastilhas.html" class="btn">Pastilhas</a>
+</main>
+
+<a href="../index.html" class="back">Voltar</a>
+
+</body>
+</html>
