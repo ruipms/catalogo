@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletrónicos Infantis - Stardiver</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Eletrónicos Infantis</h1>
+</header>
+
+<main class="menu">
+    <a href="../subcategorias/eletronicos-infantis/relogios.html" class="btn">Relógios</a>
+    <a href="../subcategorias/eletronicos-infantis/brinquedos-eletronicos.html" class="btn">Brinquedos Eletrónicos</a>
+    <a href="../subcategorias/eletronicos-infantis/acessorios.html" class="btn">Acessórios</a>
+</main>
+
+<a href="../index.html" class="back">Voltar</a>
+
+</body>
+</html>
