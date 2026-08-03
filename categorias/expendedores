@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expendores - Stardiver</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Expendores</h1>
+</header>
+
+<main class="menu">
+    <a href="../subcategorias/expendores/mini-expendores.html" class="btn">Mini Expendores</a>
+    <a href="../subcategorias/expendores/expendores-grandes.html" class="btn">Expendores Grandes</a>
+    <a href="../subcategorias/expendores/acessorios.html" class="btn">Acessórios</a>
+</main>
+
+<a href="../index.html" class="back">Voltar</a>
+
+</body>
+</html>
