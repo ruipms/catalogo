@@ -1,7 +1,7 @@
 {
   "name": "Catálogo",
   "short_name": "Catálogo",
-  "start_url": "index.html",
+ "start_url": "/catalogo/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
