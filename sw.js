@@ -1,14 +1,15 @@
 const cacheName = "catalogo-cache-v1";
 const filesToCache = [
-  "/",
-  "/index.html",
-  "/styles/style.css",
-  "/categorias/sai-sempre.html",
-  "/categorias/doces.html",
-  "/categorias/expendedores.html",
-  "/categorias/eletronicos-infantis.html",
-  "/categorias/diversao.html"
+  "/catalogo/",
+  "/catalogo/index.html",
+  "/catalogo/styles/style.css",
+  "/catalogo/categorias/sai-sempre.html",
+  "/catalogo/categorias/doces.html",
+  "/catalogo/categorias/expendedores.html",
+  "/catalogo/categorias/eletronicos-infantis.html",
+  "/catalogo/categorias/diversao.html"
 ];
+
 
 // Instala o service worker
 self.addEventListener("install", event => {
