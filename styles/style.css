@@ -61,6 +61,14 @@ h1 {
 }
 
 /* ======== PÁGINA DE PRODUTO ======== */
+.foto-produto {
+    width: 200px;      /* tamanho ideal no PC */
+    max-width: 100%;   /* adapta ao telemóvel */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
 
 .produto img {
     width: 90%;
