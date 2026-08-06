@@ -84,6 +84,7 @@ h1 {
 .modal {
     display: none;
     position: fixed;
+    position: relative; /* importante para o Chrome */
     z-index: 9999;
     padding-top: 40px;
     left: 0;
@@ -109,5 +110,6 @@ h1 {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 10000; /* garante que fica por cima da imagem */
 }
 
