@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expendedores - Stardiver</title>
+    <title>Expendedores 2</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
@@ -17,9 +17,12 @@
     <!-- Produto 1 -->
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
-        <a href="../imagens/expendedores/exp1.jpg" target="_blank">
-            <img src="../imagens/expendedores/exp1.jpg" alt="Expendedor 1" class="foto-produto">
-        </a>
+
+        <img src="../imagens/expendedores/exp1.jpg"
+             alt="Expendedor 1"
+             class="foto-produto"
+             onclick="openModal(this.src)">
+
         <h2>Expendedor 1</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
@@ -27,9 +30,12 @@
     <!-- Produto 2 -->
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
-        <a href="../imagens/expendedores/exp2.jpg" target="_blank">
-            <img src="../imagens/expendedores/exp2.jpg" alt="Expendedor 2" class="foto-produto">
-        </a>
+
+        <img src="../imagens/expendedores/exp2.jpg"
+             alt="Expendedor 2"
+             class="foto-produto"
+             onclick="openModal(this.src)">
+
         <h2>Expendedor 2</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
@@ -37,9 +43,12 @@
     <!-- Produto 3 -->
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
-        <a href="../imagens/expendedores/exp3.jpg" target="_blank">
-            <img src="../imagens/expendedores/exp3.jpg" alt="Expendedor 3" class="foto-produto">
-        </a>
+
+        <img src="../imagens/expendedores/exp3.jpg"
+             alt="Expendedor 3"
+             class="foto-produto"
+             onclick="openModal(this.src)">
+
         <h2>Expendedor 3</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
@@ -47,9 +56,12 @@
     <!-- Produto 4 -->
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
-        <a href="../imagens/expendedores/exp4.jpg" target="_blank">
-            <img src="../imagens/expendedores/exp4.jpg" alt="Expendedor 4" class="foto-produto">
-        </a>
+
+        <img src="../imagens/expendedores/exp4.jpg"
+             alt="Expendedor 4"
+             class="foto-produto"
+             onclick="openModal(this.src)">
+
         <h2>Expendedor 4</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
@@ -57,9 +69,12 @@
     <!-- Produto 5 -->
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
-        <a href="../imagens/expendedores/exp5.jpg" target="_blank">
-            <img src="../imagens/expendedores/exp5.jpg" alt="Expendedor 5" class="foto-produto">
-        </a>
+
+        <img src="../imagens/expendedores/exp5.jpg"
+             alt="Expendedor 5"
+             class="foto-produto"
+             onclick="openModal(this.src)">
+
         <h2>Expendedor 5</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
@@ -67,9 +82,12 @@
     <!-- Produto 6 -->
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
-        <a href="../imagens/expendedores/exp6.jpg" target="_blank">
-            <img src="../imagens/expendedores/exp6.jpg" alt="Expendedor 6" class="foto-produto">
-        </a>
+
+        <img src="../imagens/expendedores/exp6.jpg"
+             alt="Expendedor 6"
+             class="foto-produto"
+             onclick="openModal(this.src)">
+
         <h2>Expendedor 6</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
@@ -77,14 +95,34 @@
     <!-- Produto 7 -->
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
-        <a href="../imagens/expendedores/exp7.jpg" target="_blank">
-            <img src="../imagens/expendedores/exp7.jpg" alt="Expendedor 7" class="foto-produto">
-        </a>
+
+        <img src="../imagens/expendedores/exp7.jpg"
+             alt="Expendedor 7"
+             class="foto-produto"
+             onclick="openModal(this.src)">
+
         <h2>Expendedor 7</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
 
 </main>
+
+<!-- Modal ÚNICO -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img id="modal-img" class="modal-content">
+</div>
+
+<script>
+function openModal(src) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal-img").src = src;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
 
 <a href="../index.html" class="back">Voltar</a>
 
