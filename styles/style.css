@@ -61,13 +61,19 @@ h1 {
 }
 
 /* ======== PÁGINA DE PRODUTO ======== */
+
 .foto-produto {
-    width: 200px;      /* tamanho ideal no PC */
-    max-width: 100%;   /* adapta ao telemóvel */
+    width: 200px;          /* tamanho ideal no PC */
+    max-width: 100%;       /* adapta ao telemóvel */
     height: auto;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+
+    /* CORREÇÕES IMPORTANTES */
+    pointer-events: auto;  /* permite clique no telemóvel */
+    position: relative;    /* garante prioridade no toque */
+    z-index: 5;            /* fica acima de elementos do card */
 }
 
 .produto img {
@@ -81,10 +87,13 @@ h1 {
     font-size: 18px;
     margin: 10px 0;
 }
+
+/* ======== MODAL ======== */
+
 .modal {
     display: none;
-    position: fixed; /* TEM de ser fixed */
-    z-index: 9999;
+    position: fixed;       /* TEM de ser fixed — nunca relative */
+    z-index: 9999;         /* fica acima de tudo */
     padding-top: 40px;
     left: 0;
     top: 0;
@@ -94,12 +103,12 @@ h1 {
     background-color: rgba(0,0,0,0.9);
 }
 
-
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
-    max-height: 80vh;
+    width: 100%;           /* ocupa o ecrã no telemóvel */
+    max-width: 100%;
+    max-height: 100vh;
 }
 
 .close {
@@ -110,6 +119,5 @@ h1 {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 10000; /* garante que fica por cima da imagem */
+    z-index: 10000;        /* garante que fica por cima da imagem */
 }
-
