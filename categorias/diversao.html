@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diversão - Stardiver</title>
+    <title>Diversão 2</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
@@ -18,9 +18,10 @@
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
 
-        <a href="../imagens/diversao/div1.jpg" target="_blank">
-            <img src="../imagens/diversao/div1.jpg" alt="Diversão 1" class="foto-produto">
-        </a>
+        <img src="../imagens/diversao/div1.jpg"
+             alt="Diversão 1"
+             class="foto-produto"
+             onclick="openModal(this.src)">
 
         <h2>Diversão 1</h2>
         <p>Preço: <strong>1€</strong></p>
@@ -30,9 +31,10 @@
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
 
-        <a href="../imagens/diversao/div2.jpg" target="_blank">
-            <img src="../imagens/diversao/div2.jpg" alt="Diversão 2" class="foto-produto">
-        </a>
+        <img src="../imagens/diversao/div2.jpg"
+             alt="Diversão 2"
+             class="foto-produto"
+             onclick="openModal(this.src)">
 
         <h2>Diversão 2</h2>
         <p>Preço: <strong>1€</strong></p>
@@ -42,15 +44,33 @@
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
 
-        <a href="../imagens/diversao/div3.jpg" target="_blank">
-            <img src="../imagens/diversao/div3.jpg" alt="Diversão 3" class="foto-produto">
-        </a>
+        <img src="../imagens/diversao/div3.jpg"
+             alt="Diversão 3"
+             class="foto-produto"
+             onclick="openModal(this.src)">
 
         <h2>Diversão 3</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
 
 </main>
+
+<!-- Modal ÚNICO -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img id="modal-img" class="modal-content">
+</div>
+
+<script>
+function openModal(src) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal-img").src = src;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
 
 <a href="../index.html" class="back">Voltar</a>
 
