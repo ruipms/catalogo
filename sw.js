@@ -1,4 +1,4 @@
-const cacheName = "catalogo-v3";
+const cacheName = "catalogo com ficheiro txt";
 
 // Apenas ficheiros seguros para cache
 const filesToCache = [
