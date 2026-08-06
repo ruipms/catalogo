@@ -18,9 +18,10 @@
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
 
-        <a href="../imagens/eletronicos/eletronico.jpg" target="_blank">
-            <img src="../imagens/eletronicos/eletronico.jpg" alt="Eletrónico Infantil 1" class="foto-produto">
-        </a>
+        <img src="../imagens/eletronicos/eletronico.jpg"
+             alt="Eletrónico Infantil 1"
+             class="foto-produto"
+             onclick="openModal(this.src)">
 
         <h2>Eletrónico Infantil 1</h2>
         <p>Preço: <strong>1€</strong></p>
@@ -30,15 +31,33 @@
     <div class="produto-card">
         <p class="legenda">Carregue para aumentar</p>
 
-        <a href="../imagens/eletronicos/eletronico1.jpg" target="_blank">
-            <img src="../imagens/eletronicos/eletronico1.jpg" alt="Eletrónico Infantil 2" class="foto-produto">
-        </a>
+        <img src="../imagens/eletronicos/eletronico1.jpg"
+             alt="Eletrónico Infantil 2"
+             class="foto-produto"
+             onclick="openModal(this.src)">
 
         <h2>Eletrónico Infantil 2</h2>
         <p>Preço: <strong>1€</strong></p>
     </div>
 
 </main>
+
+<!-- Modal ÚNICO -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img id="modal-img" class="modal-content">
+</div>
+
+<script>
+function openModal(src) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal-img").src = src;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
 
 <a href="../index.html" class="back">Voltar</a>
 
