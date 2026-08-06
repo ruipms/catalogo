@@ -1,4 +1,4 @@
-const cacheName = "catalogo alterado sai sermpre";
+const cacheName = "catalogo alterado sai sempre dois";
 const filesToCache = [
   "/catalogo/",
   "/catalogo/index.html",
