@@ -83,8 +83,7 @@ h1 {
 }
 .modal {
     display: none;
-    position: fixed;
-    position: relative; /* importante para o Chrome */
+    position: fixed; /* TEM de ser fixed */
     z-index: 9999;
     padding-top: 40px;
     left: 0;
@@ -94,6 +93,7 @@ h1 {
     overflow: auto;
     background-color: rgba(0,0,0,0.9);
 }
+
 
 .modal-content {
     margin: auto;
