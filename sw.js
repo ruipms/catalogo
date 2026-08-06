@@ -1,27 +1,22 @@
-const cacheName = "paginas atualizadas";
+const cacheName = "catalogo-v2";
+
+// Ficheiros que podem ser cacheados (NÃO inclui HTML)
 const filesToCache = [
-  "/catalogo/",
-  "/catalogo/index.html",
   "/catalogo/styles/style.css",
-  "/catalogo/categorias/sai-sempre.html",
-  "/catalogo/categorias/doces.html",
-  "/catalogo/categorias/expendedores.html",
-  "/catalogo/categorias/eletronicos-infantis.html",
-  "/catalogo/categorias/diversao.html"
+  "/catalogo/imagens/"
 ];
 
-
-// Instala o service worker
+// Instala o SW e força ativação imediata
 self.addEventListener("install", event => {
+  self.skipWaiting();
   event.waitUntil(
-    caches.open(cacheName).then(cache => {
-      return cache.addAll(filesToCache);
-    })
+    caches.open(cacheName).then(cache => cache.addAll(filesToCache))
   );
 });
 
-// Ativa e limpa caches antigos
+// Ativa o SW e remove caches antigos
 self.addEventListener("activate", event => {
+  clients.claim();
   event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
@@ -33,11 +28,27 @@ self.addEventListener("activate", event => {
   );
 });
 
-// Intercepta pedidos e serve do cache
+// Intercepta pedidos
 self.addEventListener("fetch", event => {
+  const request = event.request;
+
+  // HTML → nunca usar cache
+  if (request.destination === "document") {
+    return event.respondWith(fetch(request));
+  }
+
+  // CSS, imagens → cache first
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
+    caches.match(request).then(response => {
+      return (
+        response ||
+        fetch(request, { cache: "no-store" }).then(networkResponse => {
+          return caches.open(cacheName).then(cache => {
+            cache.put(request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+      );
     })
   );
 });
