@@ -1,9 +1,8 @@
-const cacheName = "catalogo-v2";
+const cacheName = "catalogo-v3";
 
-// Ficheiros que podem ser cacheados (NÃO inclui HTML)
+// Apenas ficheiros seguros para cache
 const filesToCache = [
-  "/catalogo/styles/style.css",
-  "/catalogo/imagens/"
+  "/catalogo/styles/style.css"
 ];
 
 // Instala o SW e força ativação imediata
@@ -37,7 +36,7 @@ self.addEventListener("fetch", event => {
     return event.respondWith(fetch(request));
   }
 
-  // CSS, imagens → cache first
+  // CSS e imagens → cache first
   event.respondWith(
     caches.match(request).then(response => {
       return (
